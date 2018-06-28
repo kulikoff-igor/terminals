@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-clearmin.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/roboto.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/material-design.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/small-n-flat.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <title>Operation Terminals</title>
+</head>
+<body class="cm-no-transition cm-2-navbar">
+<div id="cm-menu">
+    <nav class="cm-navbar cm-navbar-primary">
+        <div class="cm-flex"><a href="index.html" class="cm-logo"></a></div>
+        <div class="btn btn-primary md-menu-white" data-toggle="cm-menu"></div>
+    </nav>
+    <div id="cm-menu-content">
+        <div id="cm-menu-items-wrapper">
+            <div id="cm-menu-scroller">
+                <ul class="cm-menu-items">
+                    <li><a href="terminal-registration.html" class="sf-sign-add">Регистрация устройства</a></li>
+                    <li class="cm-submenu">
+                        <a class="sf-pencil">Просмотр устройства<span class="caret"></span></a>
+                        <ul>
+                            <li><a href="terminal-search.html">Поиск устройства</a></li>
+                            <li><a href="output-terminal.html">Вывод всех устройств</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="removal-terminal.html" class="sf-sign-delete">Удаление устройства</a></li>
+                    <li><a href="bind-key-terminal.html" class="sf-keyring">Привязка ключа</a></li>
+                    <li><a href="legal-entity.html" class="sf-user-id">Юридические лица</a></li>
+                    <li class="active"><a href="operation-terminal.html" class="sf-handshake">Операции</a></li>
+                    <li><a href="terminal-currency.html" class="sf-money">Валюта</a></li>
+                    <li><a href="login.html" class="sf-lock">Завершить работу</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<header id="cm-header">
+    <nav class="cm-navbar cm-navbar-primary">
+        <div class="btn btn-primary md-menu-white hidden-md hidden-lg" data-toggle="cm-menu"></div>
+        <div class="cm-flex">
+            <h1>Home -> Legal Entity</h1>
+        </div>
+
+
+        <div class="dropdown pull-right">
+            <button class="btn btn-primary md-account-circle-white" data-toggle="dropdown"></button>
+            <ul class="dropdown-menu">
+                <li class="disabled text-center">
+                    <a style="cursor:default;"><strong>Диана Рогалевич</strong></a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-user"></i>Профиль</a>
+                </li>
+
+                <li>
+                    <a href="login.html"><i class="fa fa-fw fa-sign-out"></i> Завершить работу</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="cm-navbar cm-navbar-default cm-navbar-slideup">
+        <div class="cm-flex">
+            <div class="nav-tabs-container">
+                <ul class="nav nav-tabs">
+                    <li class="active" id="viewSearchLegalEntityTab"><a>Группы терминалов</a></li>
+                    <li id="editDeleteLegalEntityTab"><a>Схемы операций</a></li>
+                    <li id="registrationLegalEntityTab"><a></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="global">
+    <div class="container-fluid">
+        <div  class="row">
+            <div id="viewGroupTerminal" class="col-md-12">
+
+
+        </div>
+        <div id="registrationLegalEntities" class="row cm-fix-height" style="display: none; margin-top: 20px">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Описание юридического лица</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Наименование юридического лица</label>
+                            <input type="text" id="nameLegalEntity" class="form-control"
+                                   placeholder="Наименование юридического лица">
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="text" id="phoneLegalEntity" class="form-control" placeholder="Телефон">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="emailLegalEntity" class="form-control" placeholder="Email">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Адрес юридического лица</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Адрес 1</label>
+                            <input type="text" id="address1LegalEntity" class="form-control" placeholder="Адрес 1">
+                        </div>
+                        <div class="form-group">
+                            <label>Адрес 2</label>
+                            <input type="text" id="address2LegalEntity" class="form-control" placeholder="Адрес 2">
+                        </div>
+                        <div class="form-group">
+                            <label>Почтовый индекс</label>
+                            <input type="text" id="zipcodeLegalEntity" class="form-control"
+                                   placeholder="Почтовый индекс">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <a id="addLegalEntity" class="btn btn-primary btn-lg btn-block" role="button">Сохранить
+                        результат</a>
+                </div>
+            </div>
+        </div>
+        <div id="editDeleteLegalEntities" class="row cm-fix-height" style="display: none; margin-top: 20px">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Описание юридического лица
+                        <label id="idLegalEntity"></label></div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Наименование юридического лица</label>
+                            <input type="text" id="editNameLegalEntity" class="form-control"
+                                   placeholder="Наименование юридического лица">
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="text" id="editPhoneLegalEntity" class="form-control" placeholder="Телефон">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="editEmailLegalEntity" class="form-control" placeholder="Email">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Адрес юридического лица</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Адрес 1</label>
+                            <input type="text" id="editAddress1LegalEntity" class="form-control" placeholder="Адрес 1">
+                        </div>
+                        <div class="form-group">
+                            <label>Адрес 2</label>
+                            <input type="text" id="editAddress2LegalEntity" class="form-control" placeholder="Адрес 2">
+                        </div>
+                        <div class="form-group">
+                            <label>Почтовый индекс</label>
+                            <input type="text" id="editZipcodeLegalEntity" class="form-control"
+                                   placeholder="Почтовый индекс">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-success">
+                    <a id="editLegalEntity" class="btn btn-primary btn-lg btn-block" role="button">Редактировать
+                        данные</a>
+                    <a id="updateLegalEntity" class="btn btn-primary btn-lg " role="button"
+                       style="width: 49.5%;display: none">Обновить данные</a>
+                    <a id="deleteLegalEntity" class="btn btn-danger btn-lg" role="button"
+                       style="width: 50%;display: none">Удалить</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script src="assets/js/lib/jquery-2.1.3.min.js"></script>
+<script src="assets/js/jquery.mousewheel.min.js"></script>
+<script src="assets/js/jquery.cookie.min.js"></script>
+<script src="assets/js/fastclick.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/clearmin.min.js"></script>
+<script src="assets/js/demo/operationTerminal.js"></script>
+</body>
+</html>
